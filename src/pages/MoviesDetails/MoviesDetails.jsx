@@ -1,4 +1,3 @@
-// import { Button } from '@mui/material';
 import StyledLink from 'components/Navigation/Navigation.styled';
 import useFetchEvent from 'hooks/useFetchEvent';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';

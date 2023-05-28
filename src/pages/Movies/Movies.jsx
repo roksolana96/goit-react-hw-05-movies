@@ -17,9 +17,9 @@ import {
 
 
 const Movies = () => {
-
   const [event, setEvent] = useState([]);
   const [search, setSearchParams] = useSearchParams();
+
 
   const filmName = search.get('query');
   const baseURL = 'https://image.tmdb.org/t/p/w500/';
@@ -28,7 +28,7 @@ const Movies = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (search === null || search === '') return;
+    if (search === null || search === '') return ;
     fetchSearchFilm(filmName).then(setEvent);
   }, [search, filmName]);
 
@@ -37,11 +37,13 @@ const Movies = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-  
+
+
     const form = e.target;
     setSearchParams({ query: e.target.elements.query.value });
     form.reset();
 
+    
   };
 
   return (
